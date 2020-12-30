@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    # @posts = Post.include(:user).order("created_at DESK")
+    @posts = Post.includes(:user).order(created_at: :desc)
   end
 
   def new
