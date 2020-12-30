@@ -1,0 +1,19 @@
+<%= link_to "#" do%>
+  <li class="post">
+    <%= image_tag post.images[0], class: "post-image" %>
+    <div class="post-title">
+      <%= post.title %>
+      <div class="post-contents">
+        <div class="post_content">
+          <%= post.user.nickname %>
+        </div>
+        <div class="post_content">
+          <%= post.created_at %>
+        </div>
+      </div>
+    </div>
+  </li>
+<% end %>
+
+
+

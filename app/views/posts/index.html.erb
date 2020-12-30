@@ -12,23 +12,13 @@
       <% end %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
     </ul>
-<ul class="posts">
-  <% @posts.each do |post| %>
-    <%= link_to "#" do%>
-      <li class="post">
-        <%= image_tag post.images[0], class: "post-image" %>
-        <div class="post-title">
-          <%= post.title %>
-          <div class="post-contents">
-            <div class="post_content">
-              <%= post.user.nickname %>
-            </div>
-            <div class="post_content">
-              <%= post.created_at %>
-            </div>
-          </div>
-        </div>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
+
+<div class="post-main">
+  <ul class="posts">
+    <%= render partial: "post", collection: @posts%>
+  </ul>
+  <div class="side_bar">
+    <%# ここから %>
+  </div>
+</div>
+
