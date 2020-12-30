@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-header {
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffc6;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+
+}
+
+.top-icon{
+  height: 80px;
+}
+
+.lists-center{
+    display: flex;
+}
+
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #8989ff;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color:#8989ff;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #8989ff;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #8989ff;
+}
