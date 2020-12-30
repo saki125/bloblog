@@ -1,4 +1,6 @@
 <h1>Posts</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<%= link_to "投稿する", new_post_path%>
 <ul class='lists-right'>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
       <% if user_signed_in? %>
@@ -10,3 +12,4 @@
       <% end %>
       <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
     </ul>
+
