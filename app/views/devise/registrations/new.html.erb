@@ -7,54 +7,57 @@
     <h1 class='form-header-text'>
       Sign Up
     </h1>
+    <div class = "login-link">
+    <%= render "devise/shared/links" %>
+    </div>
   </div>
 
 
 
   <div class="form-group">
     <div class='form-text-wrap'>
-     <label class="form-text">Nickname</label>
-      <span class="indispensable">(Mandatory)</span>
+     <label class="form-text">ニックネーム</label>
+      <span class="indispensable">(必須)</span>
     </div>
     <%= f.text_field :nickname, class:"input-default", id:"nickname", maxlength:"40",autofocus: true %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-    <label class="form-area">Introduction</label>
+    <label class="form-area">自己紹介</label>
     </div>
     <%= f.text_area :introduction, autocomplete: "introduction",rows:"7" ,maxlength:"1000" %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">MailAddress</label>
-      <span class="indispensable">(Mandatory)</span>
+      <label class="form-text">メールアドレス</label>
+      <span class="indispensable">(必須)</span>
     </div>
     <%= f.email_field :email, class:"input-default", id:"email" %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">Password</label>
-      <span class="indispensable">(Mandatory)</span>
+      <label class="form-text">パスワード</label>
+      <span class="indispensable">(必須)</span>
     </div>
     <%= f.password_field :password, class:"input-default", id:"password" %>
-    <p class='info-text'>※Please set including both letters and numbers</p>
+    <p class='info-text'>※半角英数字混合で入力してください</p>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">Password  confirmation</label>
-      <span class="indispensable">(Mandatory)</span>
+      <label class="form-text">確認用パスワード</label>
+      <span class="indispensable">(必須)</span>
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation" %>
   </div>
-
+  
   <div class="actions">
     <%= f.submit "Sign up",class:"register-red-btn" %>
   </div>
 </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+ 
