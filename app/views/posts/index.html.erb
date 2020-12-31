@@ -17,8 +17,15 @@
   <ul class="posts">
     <%= render partial: "post", collection: @posts%>
   </ul>
-  <div class="side_bar">
-    <%# ここから %>
+  <div class="side-bar">
+    <div class="side-profile">
+      profile
+    </div>
+    <div class="side-post">
+      2020年12月31日  
+    </div>
   </div>
 </div>
-
+<div class="page">
+  <%= paginate @posts %>
+</div>
