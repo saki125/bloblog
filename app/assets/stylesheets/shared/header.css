@@ -54,6 +54,10 @@
   color:#8989ff;
 }
 
+.profile {
+  margin-bottom: 10px;
+}
+
 .login {
   text-decoration: none;
   line-height: 32px;
