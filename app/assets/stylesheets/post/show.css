@@ -1,0 +1,39 @@
+.show-contents{
+  margin: 10px auto;
+  padding: 0 300px;
+  text-align: center;
+}
+
+.show-post{
+  display: flex;
+}
+
+.show-image {
+  height: 100px;
+  width: 100px;
+  margin-top: 15px;
+}
+
+.show-title{
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid chocolate;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.show-text{
+  margin-top: 5px;
+  border: solid 2px mediumorchid;
+  border-radius: 15px;
+  height: 100vh;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.show-links{
+  margin: 10px auto;
+  
+}

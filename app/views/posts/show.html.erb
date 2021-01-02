@@ -1,1 +1,27 @@
 <%= render "devise/shared/header" %>
+
+
+<div class="show-contents">
+  <div class="show-post">
+    <%= image_tag @post.images[0], class: "show-image" %>
+    <h1 class="show-title">
+      <%= @post.title %>
+    </h1>
+  </div>
+  <div class="show-text">
+    <%= markdown(@post.text).html_safe %>
+  </div>
+  <div class="show-links">
+    <div class="show-link">
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+        <%= link_to "編集する", edit_post_path(@post.id) %>
+        <%= link_to "削除する", post_path(@post.id), method: :delete %>
+      <% end %>
+    </div>
+    <div class="show-link">
+      <%= link_to "戻る", root_path%>
+    </div>
+  </div>
+</div>
+
+
