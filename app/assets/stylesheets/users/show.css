@@ -1,0 +1,56 @@
+.user-contents{
+  text-align:center;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.box26 {
+  
+  width: 50vw;
+  position: relative;
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  border: solid 3px #ffc184;
+  border-radius: 8px;
+}
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #ffc184;
+  font-weight: bold;
+}
+.box26 p {
+  margin: 0; 
+  padding: 0;
+}
+
+.blolist{
+  font-size: 25px;
+  color: #7f7fff;
+}
+
+.postlist{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 230px;
+    justify-content: center;
+    width: 50vw;
+    background: #ffdbb7;
+    box-shadow: 0px 0px 0px 10px #ffdbb7;
+    border: dashed 2px white;
+}
+
+.post-titles{
+  margin-left: 20px;
+    font-size: 40px;
+    height: 210px;
+    padding: 10px 0;
+    width: 300px;
+    color: #7fbfff;
+}
