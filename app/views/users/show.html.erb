@@ -6,9 +6,10 @@
     <p><%= current_user.introduction %></p>
   </div>
   <p class = "blolist"><%= current_user.nickname %>さんの投稿一覧</p>
-  <div class="postlist"><% @posts.each do |post| %>
+  <% @posts.each do |post| %>
+  <div class="postlist">
       <p><%= image_tag post.images[0],:width => '200', :height => '200'%></p>
       <p class="post-titles"><%= post.title %></p>
-  </div>
+    </div>
   <% end %>
 </div>

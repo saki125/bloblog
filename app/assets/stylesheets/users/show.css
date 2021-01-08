@@ -4,7 +4,6 @@
 }
 
 .box26 {
-  
   width: 50vw;
   position: relative;
   margin: 2em auto;
@@ -12,6 +11,7 @@
   border: solid 3px #ffc184;
   border-radius: 8px;
 }
+
 .box26 .box-title {
   position: absolute;
   display: inline-block;
@@ -37,7 +37,7 @@
 .postlist{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 0 auto 50px;
     height: 230px;
     justify-content: center;
     width: 50vw;
