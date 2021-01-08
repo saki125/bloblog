@@ -3,13 +3,15 @@
 <div class="user-contents">
   <div class="box26">
     <span class="box-title">自己紹介</span>
-    <p><%= current_user.introduction %></p>
+    <p><%= markdown(current_user.introduction).html_safe %></p>
   </div>
   <p class = "blolist"><%= current_user.nickname %>さんの投稿一覧</p>
   <% @posts.each do |post| %>
-  <div class="postlist">
-      <p><%= image_tag post.images[0],:width => '200', :height => '200'%></p>
+  <%= link_to post_path(post.id) do %>
+    <div class="postlist">
+      <p><%= image_tag post.images[0],class: 'imgtag' %></p>
       <p class="post-titles"><%= post.title %></p>
     </div>
+  <% end %>
   <% end %>
 </div>
