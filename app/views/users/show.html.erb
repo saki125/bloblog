@@ -1,13 +1,17 @@
 <%= render "devise/shared/header" %>
 
 <div class="user-contents">
-  <p><%= current_user.introduction %></p>
-  <p><%= current_user.nickname %>さんの投稿一覧</p>
+  <div class="box26">
+    <span class="box-title">自己紹介</span>
+    <p><%= markdown(current_user.introduction).html_safe %></p>
+  </div>
+  <p class = "blolist"><%= current_user.nickname %>さんの投稿一覧</p>
   <% @posts.each do |post| %>
-  <%= image_tag post.images[0] %>
-    <%# <div class="content_post" style="background-image: url(<%= post.images[0] %>
-      <p><%= post.title %></p>
-      <%# <span class="name"><%= post.name %></span>
+  <%= link_to post_path(post.id) do %>
+    <div class="postlist">
+      <p><%= image_tag post.images[0],class: 'imgtag' %></p>
+      <p class="post-titles"><%= post.title %></p>
     </div>
+  <% end %>
   <% end %>
 </div>
