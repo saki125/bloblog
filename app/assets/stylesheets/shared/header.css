@@ -13,12 +13,12 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
+  font-family: "M PLUS Rounded 1c";
 }
 
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
 .top-icon{
