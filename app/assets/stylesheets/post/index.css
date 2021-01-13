@@ -6,6 +6,18 @@ a{
   text-decoration: none;
 }
 
+.link-btn{
+  display: block;
+  width: 25%;
+  background: #ffa8a8;
+  border: 1px solid #ffa8a8;
+  color: #fff;
+  line-height: 48px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
 .index-post{
   text-align: center;
   font-family: "M PLUS Rounded 1c";
@@ -27,8 +39,10 @@ a{
 .post{
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
-  border: groove 4mm yellow;
+  margin-bottom: 50px;
+  background: #ffdbb7;
+    box-shadow: 0px 0px 0px 10px #ffdbb7;
+    border: dashed 2px white;
   height: 230px;
 }
 

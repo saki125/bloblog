@@ -100,3 +100,7 @@
 .lists{
   display: block;
 }
+
+.label-test{
+  display: none
+}
