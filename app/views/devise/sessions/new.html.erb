@@ -1,16 +1,22 @@
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <ul class='lists-left'>
+       <%= link_to image_tag("test_icon.png", class: "top-icon"), root_path %>
+      </ul>
+      <h1 class='form-header-text edit-text'>
+        Sign In
+      </h1>
+      <div class = "login-link">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
 
+  
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class='form-wrap'>
-  <div class='form-header'>
-    <h1 class='form-header-text'>
-      Sign In
-    </h1>
-    <div class = "login-link">
-<%= render "devise/shared/links" %>
-    </div>
-  </div>
+
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>

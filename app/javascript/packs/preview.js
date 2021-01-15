@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
   const ImageList = document.getElementById('image-list');
+  const path = location.pathname; //pathの取得
+  const pathRegex = /^(?=.*user)(?=.*edit)/
   document.getElementById('user_image').addEventListener('change', function(e){
      // 画像が表示されている場合のみ、すでに存在している画像を削除する
-     const imageContent = document.querySelector('img');
-     if (imageContent){
-       imageContent.remove();
-     }
+    
+    const imageDelete = document.getElementById('message_image');
+    if (imageDelete){
+      imageDelete.remove();
+    }
+    
      
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
@@ -19,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // どっちかの記述を使用して画像の大きさを変更する
     // これならCSSにて画像の大きさをかく
     // blobImage.setAttribute('class', 'preview-image');
-    blobImage.setAttribute('height', 100);
+    blobImage.setAttribute('height', 150);
 
     // 生成したHTMLの要素をブラウザに表示させる
     imageElement.appendChild(blobImage);

@@ -67,6 +67,7 @@
 
 .test-image{
   height: 150px;
+  width: 150px;
 }
 .box27{
   width: 25vw;
@@ -76,4 +77,14 @@
 .box27 .box27-title {
   background: #FFF;
   color: #00bb85;
+}
+
+.user-edit{
+  display: flex;
+}
+
+.yajirushi{
+  font-size: 80px;
+  color: #ffd3a8;
+  margin: 0 auto ;
 }
