@@ -1,6 +1,10 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many_attached :images
+  has_one_attached :image
 
-  validates :title, :text, :images, presence: true
+  with_options presence: true do
+    validates :title
+    validates :text
+    validates :image
+  end
 end
