@@ -15,7 +15,7 @@
   <% @posts.each do |post| %>
   <%= link_to post_path(post.id) do %>
     <div class="postlist">
-      <p><%= image_tag post.images[0],class: 'imgtag' %></p>
+      <p><%= image_tag post.image,class: 'imgtag' %></p>
       <p class="post-titles"><%= post.title %></p>
     </div>
   <% end %>
