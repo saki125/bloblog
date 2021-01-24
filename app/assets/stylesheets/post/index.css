@@ -81,6 +81,7 @@ a{
   height: 20%;
   border: 4mm ridge brown;
   margin-bottom: 10px;
+  overflow: scroll;
 }
 
 .side-post{
@@ -96,3 +97,21 @@ a{
 }
 
 .pagination{}
+
+.profile-text{
+  font-size: 25px;
+  color: #8f76d6;
+}
+
+.pro-name{
+  font-size: 18px;
+  color: #c68eff;
+}
+
+.pro-img{
+  height: 100px;
+}
+
+.pro-info{
+  color: #c68eff;
+}
