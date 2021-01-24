@@ -5,6 +5,13 @@
     <%= link_to image_tag("test_icon.png", class: "top-icon"), root_path %>
     </ul>
     <ul class='lists-center'>
+          <% if user_signed_in? %>
+           <% if current_page?(current_user)%>
+            <div class= "mypage">My Page</div>
+           <% end %>
+          <% else %>
+           <div class= "blo-title">BLO BLOG</div>
+          <% end %>
     </ul>
     <ul class='lists-right'>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>

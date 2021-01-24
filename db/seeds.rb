@@ -1,5 +1,9 @@
-first_user = User.create!(nickname: "アナログ太郎", email: "test1@test.com", password: "1111aaaa", password_confirmation: "1111aaaa", introduction: "アナログ太郎です！")
-second_user = User.create!(nickname: "デジタル太郎", email: "test2@test.com", password: "1111aaaa", password_confirmation: "1111aaaa", introduction: "デジタル太郎です！")
+first_user = User.new(nickname: "アナログ太郎", email: "test1@test.com", password: "1111aaaa", password_confirmation: "1111aaaa", introduction: "アナログ太郎です！")
+first_user.image.attach(io: File.open("./app/assets/images/test_icon.png"), filename: 'test_icon.png')
+first_user.save!
+second_user = User.new(nickname: "デジタル太郎", email: "test2@test.com", password: "1111aaaa", password_confirmation: "1111aaaa", introduction: "デジタル太郎です！")
+second_user.image.attach(io: File.open("./app/assets/images/test_icon.png"), filename: 'test_icon.png')
+second_user.save!
 
 post_1 = Post.new(title: "ダミーデータです", text: "```ruby\n変数について\n```", user_id: first_user.id)
 post_1.image.attach(io: File.open("./app/assets/images/test_icon.png"), filename: 'test_icon.png')
