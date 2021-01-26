@@ -9,17 +9,13 @@
 .nav {
   font-size: 18px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
+  font-family: "M PLUS Rounded 1c";
 }
 
-.lists-left {
-  display: flex;
-  min-width: 200px;
-
-}
 
 .top-icon{
   height: 80px;
@@ -42,12 +38,14 @@
   margin-right: 3vw;
   color: #8989ff;
   font-weight: bold;
+  font-size: 20px;
 }
 
 
 .logout {
   text-decoration: none;
   color:#8989ff;
+  font-size: 20px;
 }
 
 .profile {
@@ -64,4 +62,23 @@
 .sign-up {
   text-decoration: none;
   color: #8989ff;
+}
+
+.mypage {
+  line-height: 100px;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+}
+
+.edit-text{
+  margin-left: 140px;
+}
+
+.blo-title{
+  line-height: 100px;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  margin-left: 100px;
 }

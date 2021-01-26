@@ -3,7 +3,7 @@
 
 <div class="index-post">
   <h1>ブログ一覧</h1>
-  <%= link_to "投稿する", new_post_path%>
+  <%= link_to "投稿する", new_post_path, class: "link-btn"%>
 </div>
 
 
@@ -13,7 +13,14 @@
   </ul>
   <div class="side-bar">
     <div class="side-profile">
-      profile
+      <div class="profile-text">profile</div>
+      <% if user_signed_in? %>
+        <div class="pro-name">ニックネーム:<%= current_user.nickname %></div><br>
+        <%= image_tag current_user.image ,class: 'pro-img' %>
+        <div class="pro-info">自己紹介:<%= current_user.introduction %></div><br>
+
+      <% end %>
+
     </div>
     <div class="side-post">
       2020年12月31日  

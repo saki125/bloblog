@@ -1,9 +1,15 @@
 <%= render "devise/shared/header" %>
 
 <div class="user-contents">
-  <div class="box26">
-    <span class="box-title">自己紹介</span>
-    <p><%= markdown(current_user.introduction).html_safe %></p>
+  <div class = "box26-all">
+    <div class = "box26 box27">
+      <span class="box-title box27-title">アイコン</span>
+      <p><%= image_tag current_user.image, class: "test-image" %></p>
+    </div>
+    <div class="box26">
+      <span class="box-title">自己紹介</span>
+      <p><%= markdown(current_user.introduction).html_safe %></p>
+    </div>
   </div>
   <p class = "blolist"><%= current_user.nickname %>さんの投稿一覧</p>
   <% @posts.each do |post| %>

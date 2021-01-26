@@ -3,6 +3,10 @@
   font-family: "M PLUS Rounded 1c";
 }
 
+.box26-all{
+  display: flex;
+}
+
 .box26 {
   width: 50vw;
   position: relative;
@@ -32,6 +36,7 @@
 .blolist{
   font-size: 25px;
   color: #7f7fff;
+  margin-bottom: 20px;
 }
 
 .postlist{
@@ -58,4 +63,28 @@
 .imgtag{
   width: 200px;
   height: 200px;
+}
+
+.test-image{
+  height: 150px;
+  width: 150px;
+}
+.box27{
+  width: 25vw;
+  border: solid 3px #00bb85;
+}
+
+.box27 .box27-title {
+  background: #FFF;
+  color: #00bb85;
+}
+
+.user-edit{
+  display: flex;
+}
+
+.yajirushi{
+  font-size: 80px;
+  color: #ffd3a8;
+  margin: 0 auto ;
 }
