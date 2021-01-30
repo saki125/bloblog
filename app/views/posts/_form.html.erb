@@ -1,6 +1,24 @@
 <%= form_with model: post, local: true do |f| %>
 <%= render 'shared/error_messages', model: f.object %>
-  <%= f.file_field :image %>
+  <% if post.id.blank? %>
+    <label class="form-image">
+      <div id="image-list">
+        <%= f.file_field :image, class: 'label-test', id: "user_image"%>
+        <%= image_tag "sample.png", class: "test-image", id: "message_image"%>
+      </div>
+    </label>
+  <% else %>
+    <div class="user-edit">
+      <%= image_tag post.image, class: "test-image"%>
+      <div class="yajirushi">➡︎</div>
+      <label class="form-image">
+        <div id="image-list">
+          <%= f.file_field :image,class: 'label-test', id: "user_image"%>
+          <%= image_tag "sample.png", class: "test-image", id: "message_image"%>
+        </div>
+      </label>
+    </div>
+  <% end %>
   <%= f.text_field :title %>
   <%= f.text_area :text%>
   <% if post.id.blank? %>

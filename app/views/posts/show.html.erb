@@ -15,7 +15,8 @@
     <div class="show-link">
       <% if user_signed_in? && current_user.id == @post.user_id %>
         <%= link_to "編集する", edit_post_path(@post.id) %>
-        <%= link_to "削除する", post_path(@post.id), method: :delete %>
+        <%= button_to '削除する', post_path(@post.id), method: :delete, id: "post-delete" %>
+        <%#= link_to "削除する", post_path(@post.id), method: :delete, id: "post-delete" %>
       <% end %>
     </div>
     <div class="show-link">

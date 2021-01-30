@@ -24,11 +24,12 @@
   <div class="user-edit">
     <%= image_tag @user.image, class: "test-image"%>
     <div class="yajirushi">➡︎</div>
-    <div id="image-list">
-      <label class="form-image">
+    <label class="form-image">
+      <div id="image-list">
         <%= f.file_field :image,class: 'label-test'%>
         <%= image_tag "sample.png", class: "test-image", id: "message_image"%>
-    </div>
+      </div>
+    </label>
   </div>
 </div>
 
