@@ -1,17 +1,16 @@
 class UsersController < ApplicationController
+  before_action :set_user, only:[:edit, :update, :destroy, :show]
+  before_action :if_user, only:[:edit, :update, :destroy]
+
   def show
     @posts = current_user.posts.order(created_at: :desc)
   end
 
   def edit
-    @user = User.find(params[:id])
-    if @user != current_user
-           redirect_to root_path
-    end
+    
   end
   
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
           redirect_to user_path(@user)
     else
@@ -19,9 +18,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @posts = current_user.posts.order(created_at: :desc)
+    if params[:post_delete] == "true"
+       @user.destroy
+       redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:nickname,:introduction,:image)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def if_user
+    if current_user.id != @user.id
+      redirect_to root_path
+    end
   end
 end
