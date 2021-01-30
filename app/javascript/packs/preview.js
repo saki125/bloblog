@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded', function(){
      // 画像が表示されている場合のみ、すでに存在している画像を削除する
     
     const imageDelete = document.getElementById('message_image');
+    const imageFile = document.getElementById('preview-image');
     if (imageDelete){
       imageDelete.remove();
+    } else {
+      imageFile.remove();
     }
     
      
@@ -22,9 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
     blobImage.setAttribute('src', blob);
     // どっちかの記述を使用して画像の大きさを変更する
     // これならCSSにて画像の大きさをかく
-    // blobImage.setAttribute('class', 'preview-image');
-    blobImage.setAttribute('height', 150);
-
+    blobImage.setAttribute('id', 'preview-image');
     // 生成したHTMLの要素をブラウザに表示させる
     imageElement.appendChild(blobImage);
     ImageList.appendChild(imageElement);

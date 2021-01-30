@@ -7,3 +7,9 @@
 .field {
   text-align: center;
 }
+
+#preview-image{
+  border-radius: 30px;
+  height: 150px;
+  width: 150px;
+}
