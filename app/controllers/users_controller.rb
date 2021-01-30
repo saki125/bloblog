@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only:[:edit, :update, :destroy]
+  before_action :set_user, only:[:edit, :update, :destroy, :show]
   before_action :if_user, only:[:edit, :update, :destroy]
 
   def show
@@ -18,8 +18,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def destory
-    if @user.destroy 
+  def destroy
+    @posts = current_user.posts.order(created_at: :desc)
+    if params[:post_delete] == "true"
+       @user.destroy 
       redirect_to root_path
     else
       render :show
