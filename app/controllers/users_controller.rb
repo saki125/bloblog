@@ -21,8 +21,8 @@ class UsersController < ApplicationController
   def destroy
     @posts = current_user.posts.order(created_at: :desc)
     if params[:post_delete] == "true"
-       @user.destroy 
-      redirect_to root_path
+       @user.destroy
+       redirect_to root_path
     else
       render :show
     end
