@@ -1,5 +1,5 @@
-<%= link_to post_path(post.id) do%>
   <li class="post">
+<%= link_to post_path(post.id) do%>
     <%= image_tag post.image, class: "post-image" %>
     <div class="post-title">
       <%= post.title %>
@@ -10,10 +10,11 @@
         <div class="post_content">
           <%= post.created_at %>
         </div>
+<% end %>
+        <%= render "like", post: post %>
       </div>
     </div>
   </li>
-<% end %>
 
 
 

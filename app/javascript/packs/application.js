@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../delete")
 require('./preview')
+require("../like")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
