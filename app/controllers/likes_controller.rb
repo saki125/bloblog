@@ -7,11 +7,8 @@ class LikesController < ApplicationController
   end
 
   def create
-    #  binding.pry
     @like = Like.new(user_id: current_user.id, post_id: params[:post_id])
-    # binding.pry
     @like.save
-    # render json:{ like: like }
   end
 
   def destroy
