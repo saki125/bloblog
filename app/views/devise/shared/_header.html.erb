@@ -18,6 +18,7 @@
       <% if user_signed_in? %>
         <% if current_page?(current_user)%>
           <div class= "lists">
+          <li class='profile'><%= link_to "いいね一覧", post_likes_path(current_user) %></li>
           <li class='profile'><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
           </div>

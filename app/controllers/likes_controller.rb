@@ -1,5 +1,11 @@
 class LikesController < ApplicationController
   before_action :set_post
+
+  def index
+    likes = Like.where(user_id: current_user.id).pluck(:post_id)
+    @like_list = Post.find(likes)
+  end
+
   def create
     #  binding.pry
     @like = Like.new(user_id: current_user.id, post_id: params[:post_id])
