@@ -11,7 +11,9 @@
           <%= post.created_at %>
         </div>
 <% end %>
-        <%= render "like", post: post %>
+        <div class="likes_heart" id="post_<%= post.id %>">
+          <%= render "likes/like", post: post %>
+        </div>
       </div>
     </div>
   </li>
