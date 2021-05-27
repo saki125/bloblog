@@ -12,13 +12,12 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @post = Post.find_by(id: params[:post_id])
     @like = current_user.likes.find_by(post_id: @post.id)
     @like.destroy
   end
-
+  
   private
-
+  
   def set_post
     @post = Post.find(params[:post_id])
   end
