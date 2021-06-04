@@ -1,0 +1,85 @@
+.comment{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #ffeddb;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.user-info{
+  width: 30%;
+  text-align: left;
+}
+
+.comment-text{
+  width: 50%;
+  text-align: left;
+}
+
+.kururi{
+  overflow: scroll;
+  height: 40vh;
+}
+
+#comments{
+  margin:2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+}
+#comments:before,#comments:after
+{
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
+}
+#comments:after {
+  top:-12px;
+  left:-12px;
+}
+#comments:before {
+  bottom:-12px;
+  right:-12px;
+}
+#comments .comment {
+  margin: 0; 
+  padding: 0;
+}
+
+.comment-field{
+  width: 50vw;
+  height: 30vh;
+  display: block;
+  margin: 30px auto;
+  border: solid 2px #ffcb8a;
+  background-color: #ffeddb;
+  font-family: "M PLUS Rounded 1c";
+}
+
+.comment-btn{
+  display       : inline-block;
+  border-radius : 20%;
+  font-size     : 14pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 16px 30px;
+  background    : #ffcb8a;
+  color         : #ffffff;
+  line-height   : 1em;
+  transition    : .3s;
+  border        : 2px solid #ffcb8a;
+  font-family: "M PLUS Rounded 1c";
+}
+.comment-btn:hover {
+  color         : #ffcb8a;
+  background    : #ffffff;
+}
+
+.com-index{
+  font-size: 25px;
+  color: #ffcb8a;
+  font-family: "M PLUS Rounded 1c";
+}

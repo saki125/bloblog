@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_one_attached :image
   has_many :likes
+  has_many :comments, dependent: :destroy
 
     validates :nickname,presence: true,uniqueness: { case_sensitive: true }
 
