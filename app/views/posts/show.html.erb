@@ -11,28 +11,16 @@
   <div class="show-text">
     <%= markdown(@post.text).html_safe %>
   </div>
+  
   <%# コメント機能ここから %>
   <div id="comments">
-    <div class = "kururi">
-    <div class = "com-index">コメント一覧</div>
-    <% @post.comments.each do |comment| %>
-      <div class="comment">
-        <div class="user-info"><%= comment.user.nickname %>さん</div>
-        <p class = "comment-text"><%= comment.comment%></p>
-        <%= link_to post_comment_path(post_id: @post.id, id: comment.id), method: :delete do %>
-          <i class="fa fa-times" aria-hidden="true"></i>
-        <% end %>
-      </div>
-    <% end %>
-    </div>
+    <%= render partial: 'comments/index', locals: {comments: @comments} %>
   </div>
     <% if user_signed_in? && current_user.id != @post.user_id %>
-      <%= form_with model: [@post, @comment], id: "comment_form", local: true do |f| %>
-        <%= f.text_area :comment ,placeholder:"コメントを入力してね!", class: "comment-field" %>
-        <%= f.submit "コメントする" ,class:"comment-btn" %>
-      <% end %>
+      <%= render partial: 'comments/form', locals: {comment: @comment, post:@post} %>
     <% end %>
-  <%# ここまで %>
+  <%# コメント機能ここまで %>
+
   <div class="show-links">
     <div class="show-link">
       <% if user_signed_in? && current_user.id == @post.user_id %>

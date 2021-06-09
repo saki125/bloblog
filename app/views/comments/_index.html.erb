@@ -1,0 +1,12 @@
+<div class = "kururi">
+    <div class = "com-index">コメント一覧</div>
+    <% comments.each do |comment| %>
+      <div class="comment">
+        <div class="user-info"><%= comment.user.nickname %>さん</div>
+        <p class = "comment-text"><%= comment.comment%></p>
+        <%= link_to post_comment_path(post_id: @post.id, id: comment.id), method: :delete,remote: true do %>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    <% end %>
+</div>
