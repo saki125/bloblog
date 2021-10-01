@@ -11,6 +11,16 @@
   <div class="show-text">
     <%= markdown(@post.text).html_safe %>
   </div>
+  
+  <%# コメント機能ここから %>
+  <div id="comments">
+    <%= render partial: 'comments/index', locals: {comments: @comments} %>
+  </div>
+    <% if user_signed_in? && current_user.id != @post.user_id %>
+      <%= render partial: 'comments/form', locals: {comment: @comment, post:@post} %>
+    <% end %>
+  <%# コメント機能ここまで %>
+
   <div class="show-links">
     <div class="show-link">
       <% if user_signed_in? && current_user.id == @post.user_id %>

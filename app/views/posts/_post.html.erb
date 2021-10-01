@@ -1,5 +1,5 @@
   <li class="post">
-<%= link_to post_path(post.id) do%>
+<%= link_to post_path(post.id), data: {"turbolinks"=>false} do%>
     <%= image_tag post.image, class: "post-image" %>
     <div class="post-title">
       <%= post.title %>
